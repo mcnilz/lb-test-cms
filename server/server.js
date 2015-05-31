@@ -2,6 +2,13 @@ var loopback = require('loopback');
 var boot = require('loopback-boot');
 
 var app = module.exports = loopback();
+var page = require('./middleware/page');
+
+app.middlewareFromConfig(page, {
+  enabled: true,
+  phase: 'routes',
+  paths: /^(\/.*)/
+});
 
 app.start = function() {
   // start the web server

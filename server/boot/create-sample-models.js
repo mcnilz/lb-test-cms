@@ -3,7 +3,8 @@ module.exports = function(app) {
     if (err) throw err;
 
     app.models.Page.create([
-      {path: '/', title: 'Homepage', content: '<p>Hello World.</p>'}
+      {path: '/', title: 'Homepage', content: '<p>Hello World. <a href="/foobar">link</a></p>'},
+      {path: '/foobar', title: 'Test page', content: '<h1>Foobar</h1><p>Lorem ipsum</p>'}
     ], function(err, pages) {
       if (err) throw err;
 
