@@ -1,0 +1,30 @@
+{
+  "name": "Page",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "path": {
+      "type": "string",
+      "required": true,
+      "length": 250
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "length": 250
+    },
+    "content": {
+      "type": "string",
+      "mysql": {
+        "dataType": "TEXT"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}
